@@ -8,7 +8,7 @@
 #
 #    PINECONE_PROJECTS  - JSON array with all project names and API keys
 #    RESEND_API_KEY     - Get a free key at https://resend.com
-#    ALERT_EMAIL        - Where to send alerts, e.g. team@dialogintelligens.dk
+#    ALERT_EMAIL        - Where to send alerts, e.g. nicholas@dialogintelligens.dk
 #    FROM_EMAIL         - Sender address at your verified domain
 #
 # 3. That's it! Runs every 2 hours. Trigger manually via Actions -> Run workflow.
@@ -60,9 +60,12 @@ jobs:
       - name: Run Pinecone monitor
         env:
           PINECONE_PROJECTS: ${{ secrets.PINECONE_PROJECTS }}
-          RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
           ALERT_EMAIL:       ${{ secrets.ALERT_EMAIL }}
           FROM_EMAIL:        ${{ secrets.FROM_EMAIL }}
+          SMTP_HOST:         "smtp.resend.com"
+          SMTP_PORT:         "465"
+          SMTP_USER:         "resend"
+          SMTP_PASSWORD:     ${{ secrets.RESEND_API_KEY }}
           DROP_THRESHOLD:    "0.20"
           DROP_GRACE_HOURS:  "6"
           STALE_DAYS:        "7"
