@@ -1,0 +1,93 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Pinecone Index Monitor — GitHub Actions Workflow
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# SETUP (one-time, ~10 minutes):
+#
+# 1. Push this repo to github.com/DialogIntelligens/pinecone-monitor
+#
+# 2. Add these GitHub Actions secrets (Settings → Secrets and variables → Actions):
+#
+#    PINECONE_PROJECTS  — JSON array with all project names and API keys, e.g.:
+#                         [
+#                           {"name":"teamny",  "api_key":"pcsk_78tU5a_..."},
+#                           {"name":"teamny1", "api_key":"pcsk_7M3Xvh_..."},
+#                           ...all 18 projects...
+#                         ]
+#
+#    RESEND_API_KEY     — Get a free key at https://resend.com
+#                         (sign up, verify dialogintelligens.dk, copy API key)
+#
+#    ALERT_EMAIL        — Where to send alerts, e.g. team@dialogintelligens.dk
+#
+#    FROM_EMAIL         — Sender address at your verified domain,
+#                         e.g. monitor@dialogintelligens.dk
+#
+# 3. That's it! The monitor runs every day at 07:00 UTC (9:00 Copenhagen time).
+#    You can also trigger it manually via Actions → Run workflow.
+#
+# HOW IT WORKS:
+#   - Checks every index in every project via the Pinecone API
+#   - Compares vector counts to the previous run (stored in pinecone_state.json)
+#   - Sends an email if any index: drops >20%, is stuck for 7+ days, or hits 0
+#   - Commits the updated state back to this repo automatically
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Pinecone Index Monitor
+
+on:
+  schedule:
+    # Every 2 hours — needed to catch drops mid-cycle and confirm recovery
+    # (Drop alerts only fire after DROP_GRACE_HOURS=6h of sustained low count,
+    #  so the 2h cadence is what allows us to detect both the drop AND the recovery)
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    # Also allows manual run from the GitHub Actions UI
+
+permissions:
+  contents: write   # Required to commit the updated pinecone_state.json
+
+jobs:
+  monitor:
+    name: Check all Pinecone indexes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Check out the repo ─────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use the default GITHUB_TOKEN — no extra setup needed
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Python setup ───────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # ── 3. Install dependencies ───────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. Run the monitor ────────────────────────────────────────────────
+      - name: Run Pinecone monitor
+        env:
+          # ── Required secrets ──────────────────────────────────────────────
+          PINECONE_PROJECTS: ${{ secrets.PINECONE_PROJECTS }}
+          RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL:       ${{ secrets.ALERT_EMAIL }}
+          FROM_EMAIL:        ${{ secrets.FROM_EMAIL }}
+          # ── Tunable thresholds ────────────────────────────────────────────
+          DROP_THRESHOLD:    "0.20"   # Start tracking if count drops by 20%+
+          DROP_GRACE_HOURS:  "6"      # Alert only if drop persists for 6+ hours (handles delta updates)
+          STALE_DAYS:        "7"      # Alert if count completely unchanged for 7 days
+        run: python pinecone_monitor.py
+
+      # ── 5. Commit updated state file back to repo ─────────────────────────
+      #    [skip ci] in the commit message prevents this from triggering
+      #    another workflow run — important to avoid infinite loops.
+      - name: Save updated state to repo
+   

@@ -1,0 +1,12 @@
+# Don't commit sensitive files
+SECRETS_TEMPLATE.txt
+*.env
+.env.*
+local_config.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

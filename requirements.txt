@@ -1,0 +1,3 @@
+# Pinecone Monitor dependencies
+# The monitor uses only the standard library + pinecone SDK
+pinecone>=3.0.0
