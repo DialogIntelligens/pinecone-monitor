@@ -571,8 +571,8 @@
       "last_vector_count": 2746
     },
     "dilling-faq": {
-      "drop_detected_at": "2026-04-16T07:33:41.670641+00:00",
-      "drop_from_count": 10000,
+      "drop_detected_at": null,
+      "drop_from_count": null,
       "last_changed_at": "2026-04-17T02:51:33.896577+00:00",
       "last_checked_at": "2026-04-17T06:05:32.969652+00:00",
       "last_vector_count": 303
