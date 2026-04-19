@@ -13,6 +13,12 @@ HOW DROP DETECTION WORKS (handles delta update pipelines):
   If it recovers in time, nothing is sent. If still low after the grace period,
   you get the alert.
 
+ALERT CADENCE (no spam):
+  1. Drop persists past grace period  -> Alert #1 sent
+  2. Still dropped after REMINDER_HOURS (default 24h) -> Reminder sent, then the
+     current lower count is accepted as the new baseline (resets state).
+  3. No further emails for that drop -- silence until a new drop is detected.
+
 Alert conditions:
   - Vector count dropped >DROP_THRESHOLD (default 20%) for >DROP_GRACE_HOURS (6h)
     without recovering  ->  "stuck pipeline"
@@ -30,6 +36,7 @@ Required GitHub Actions secrets:
 Optional env vars (with defaults):
   DROP_THRESHOLD     -- Float (default 0.20 = 20%) -- tracks drops above this size
   DROP_GRACE_HOURS   -- Float (default 6.0) -- alert fires only if drop lasts this long
+  REMINDER_HOURS     -- Float (default 24.0) -- hours after Alert #1 before final reminder
   STALE_DAYS         -- Int (default 7) -- alert if count unchanged this many days
 """
 
@@ -58,6 +65,7 @@ SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
 
 DROP_THRESHOLD   = float(os.environ.get("DROP_THRESHOLD",   "0.20"))
 DROP_GRACE_HOURS = float(os.environ.get("DROP_GRACE_HOURS", "6.0"))
+REMINDER_HOURS   = float(os.environ.get("REMINDER_HOURS",   "24.0"))
 STALE_DAYS       = int(os.environ.get("STALE_DAYS",         "7"))
 
 PROJECTS_JSON = os.environ.get("PINECONE_PROJECTS", "[]")
@@ -175,11 +183,12 @@ def check_project(project_name, api_key, state, alerts):
             continue
 
         # --- Load previous state for this index ---
-        prev             = project_state.get(index_name, {})
-        prev_count       = prev.get("last_vector_count")     # None on first run
-        last_changed_iso = prev.get("last_changed_at")
-        drop_detected_at = prev.get("drop_detected_at")      # ISO str or None
-        drop_from_count  = prev.get("drop_from_count")       # int or None
+        prev                = project_state.get(index_name, {})
+        prev_count          = prev.get("last_vector_count")
+        last_changed_iso    = prev.get("last_changed_at")
+        drop_detected_at    = prev.get("drop_detected_at")
+        drop_from_count     = prev.get("drop_from_count")
+        first_alert_sent_at = prev.get("first_alert_sent_at")
 
         # --- Is the current count significantly lower than last run? ---
         is_significant_drop = False
@@ -187,11 +196,12 @@ def check_project(project_name, api_key, state, alerts):
             drop_frac = (prev_count - current_count) / prev_count
             is_significant_drop = (drop_frac >= DROP_THRESHOLD) or (current_count == 0)
         elif prev_count == 0 and current_count == 0 and drop_detected_at:
-            is_significant_drop = True  # still empty, ongoing
+            is_significant_drop = True
 
         # --- Drop state machine ---
+        do_rebaseline = False
+
         if is_significant_drop and drop_detected_at is None:
-            # First time we see this drop -- start grace period, no alert yet
             drop_detected_at = now_iso
             drop_from_count  = prev_count
             print("      [WATCH] Drop detected -- grace period started ({:.0f}h until alert if not recovered)".format(
@@ -202,42 +212,73 @@ def check_project(project_name, api_key, state, alerts):
             hours_elapsed = (now_dt - detected_dt).total_seconds() / 3600
             baseline      = drop_from_count or 0
 
-            # Recovery = count climbed back above (1 - threshold) of original baseline
             recovery_floor = baseline * (1 - DROP_THRESHOLD)
             recovered = (current_count >= recovery_floor) and (current_count > 0)
 
             if recovered:
-                # Recovered within grace period -- clear state, no alert
                 print("      [OK] Recovered: {:,} -> {:,} in {:.1f}h -- no alert sent".format(
                     baseline, current_count, hours_elapsed))
-                drop_detected_at = None
-                drop_from_count  = None
+                drop_detected_at    = None
+                drop_from_count     = None
+                first_alert_sent_at = None
 
             elif hours_elapsed >= DROP_GRACE_HOURS:
-                # Grace period expired, still low -- fire alert
                 actual_pct = (baseline - current_count) / baseline if baseline > 0 else 1.0
-                if current_count == 0:
-                    msg        = "Index empty for {:.0f}h (was {:,} vectors) -- pipeline may be stuck".format(
-                        hours_elapsed, baseline)
-                    alert_type = "empty_index"
-                else:
-                    msg        = "Down {:.1%} for {:.0f}h ({:,} -> {:,}) -- not recovering".format(
-                        actual_pct, hours_elapsed, baseline, current_count)
-                    alert_type = "big_drop"
 
-                print("      [ALERT] " + msg)
-                alerts.append({
-                    "type":           alert_type,
-                    "project":        project_name,
-                    "index":          index_name,
-                    "previous_count": baseline,
-                    "current_count":  current_count,
-                    "drop_pct":       round(actual_pct * 100, 1),
-                    "hours_elapsed":  round(hours_elapsed, 1),
-                    "message":        msg,
-                })
-                # Keep drop_detected_at so we don't spam the same alert every 2h.
-                # It clears only when the index recovers.
+                if first_alert_sent_at is None:
+                    # Alert #1 -- grace period expired
+                    if current_count == 0:
+                        msg        = "Index empty for {:.0f}h (was {:,} vectors) -- pipeline may be stuck".format(
+                            hours_elapsed, baseline)
+                        alert_type = "empty_index"
+                    else:
+                        msg        = "Down {:.1%} for {:.0f}h ({:,} -> {:,}) -- not recovering".format(
+                            actual_pct, hours_elapsed, baseline, current_count)
+                        alert_type = "big_drop"
+                    print("      [ALERT] " + msg)
+                    alerts.append({
+                        "type":           alert_type,
+                        "project":        project_name,
+                        "index":          index_name,
+                        "previous_count": baseline,
+                        "current_count":  current_count,
+                        "drop_pct":       round(actual_pct * 100, 1),
+                        "hours_elapsed":  round(hours_elapsed, 1),
+                        "message":        msg,
+                    })
+                    first_alert_sent_at = now_iso
+
+                else:
+                    first_sent_dt     = datetime.fromisoformat(first_alert_sent_at)
+                    hours_since_alert = (now_dt - first_sent_dt).total_seconds() / 3600
+
+                    if hours_since_alert >= REMINDER_HOURS:
+                        # Final reminder -- then rebaseline, no more emails
+                        if current_count == 0:
+                            msg        = "Still empty for {:.0f}h (was {:,} vectors) -- accepting as new state".format(
+                                hours_elapsed, baseline)
+                            alert_type = "empty_index"
+                        else:
+                            msg        = "Reminder: still down {:.1%} for {:.0f}h ({:,} -> {:,}) -- accepting {:,} as new baseline".format(
+                                actual_pct, hours_elapsed, baseline, current_count, current_count)
+                            alert_type = "drop_reminder"
+                        print("      [REMINDER] " + msg)
+                        alerts.append({
+                            "type":           alert_type,
+                            "project":        project_name,
+                            "index":          index_name,
+                            "previous_count": baseline,
+                            "current_count":  current_count,
+                            "drop_pct":       round(actual_pct * 100, 1),
+                            "hours_elapsed":  round(hours_elapsed, 1),
+                            "message":        msg,
+                        })
+                        do_rebaseline = True
+
+                    else:
+                        remaining_reminder = REMINDER_HOURS - hours_since_alert
+                        print("      [QUIET] Alert sent {:.1f}h ago -- reminder in {:.1f}h, then new baseline".format(
+                            hours_since_alert, remaining_reminder))
 
             else:
                 remaining = DROP_GRACE_HOURS - hours_elapsed
@@ -267,22 +308,32 @@ def check_project(project_name, api_key, state, alerts):
                 })
 
         # --- Update state ---
-        if prev_count is None:
-            new_last_changed = now_iso           # first run
-        elif current_count != prev_count:
-            new_last_changed = now_iso           # count moved
+        if do_rebaseline:
+            project_state[index_name] = {
+                "last_vector_count":   current_count,
+                "last_changed_at":     now_iso,
+                "last_checked_at":     now_iso,
+                "drop_detected_at":    None,
+                "drop_from_count":     None,
+                "first_alert_sent_at": None,
+            }
         else:
-            new_last_changed = last_changed_iso  # unchanged
+            if prev_count is None:
+                new_last_changed = now_iso
+            elif current_count != prev_count:
+                new_last_changed = now_iso
+            else:
+                new_last_changed = last_changed_iso
 
-        project_state[index_name] = {
-            "last_vector_count": current_count,
-            "last_changed_at":   new_last_changed or now_iso,
-            "last_checked_at":   now_iso,
-            "drop_detected_at":  drop_detected_at,
-            "drop_from_count":   drop_from_count,
-        }
+            project_state[index_name] = {
+                "last_vector_count":   current_count,
+                "last_changed_at":     new_last_changed or now_iso,
+                "last_checked_at":     now_iso,
+                "drop_detected_at":    drop_detected_at,
+                "drop_from_count":     drop_from_count,
+                "first_alert_sent_at": first_alert_sent_at,
+            }
 
-    # Remove state entries for indexes that were deleted
     for gone in list(project_state.keys()):
         if gone not in active_index_names:
             print("\n    [INFO] Index '{}' no longer exists -- removed from state".format(gone))
@@ -297,6 +348,7 @@ def build_html_email(alerts):
     BADGE = {
         "empty_index":         ("#dc2626", "Empty Index"),
         "big_drop":            ("#ea580c", "Drop Not Recovering"),
+        "drop_reminder":       ("#7c3aed", "Drop Reminder (final)"),
         "stale_index":         ("#ca8a04", "Stale - No Updates"),
         "unreachable_index":   ("#6b7280", "Unreachable Index"),
         "unreachable_project": ("#374151", "Unreachable Project"),
@@ -305,20 +357,19 @@ def build_html_email(alerts):
     rows = ""
     for a in alerts:
         color, label = BADGE.get(a["type"], ("#6b7280", "Alert"))
+        badge = "<span style='background:{c};color:#fff;padding:3px 9px;border-radius:4px;font-size:12px;font-weight:600;'>{l}</span>".format(
+            c=color, l=label)
+        cell_style = "padding:10px 12px;border-bottom:1px solid #e5e7eb;"
         rows += (
             "<tr>"
-            "<td style='padding:10px 12px;border-bottom:1px solid #e5e7eb;white-space:nowrap;'>"
-            "<span style='background:{color};color:#fff;padding:3px 9px;border-radius:4px;"
-            "font-size:12px;font-weight:600;'>{label}</span></td>"
-            "<td style='padding:10px 12px;border-bottom:1px solid #e5e7eb;"
-            "font-family:monospace;font-size:13px;'>{project}</td>"
-            "<td style='padding:10px 12px;border-bottom:1px solid #e5e7eb;"
-            "font-family:monospace;font-size:13px;'>{index}</td>"
-            "<td style='padding:10px 12px;border-bottom:1px solid #e5e7eb;"
-            "font-size:13px;'>{message}</td>"
+            "<td style='{cs}white-space:nowrap;'>{badge}</td>"
+            "<td style='{cs}font-family:monospace;font-size:13px;'>{project}</td>"
+            "<td style='{cs}font-family:monospace;font-size:13px;'>{index}</td>"
+            "<td style='{cs}font-size:13px;'>{message}</td>"
             "</tr>"
         ).format(
-            color=color, label=label,
+            cs=cell_style,
+            badge=badge,
             project=a.get("project", ""),
             index=a.get("index", ""),
             message=a.get("message", ""),
@@ -327,38 +378,37 @@ def build_html_email(alerts):
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     count   = len(alerts)
 
-    return (
+    header = (
         "<!DOCTYPE html><html><body style='font-family:-apple-system,BlinkMacSystemFont,"
         "Segoe UI,sans-serif;background:#f9fafb;margin:0;padding:24px;'>"
         "<div style='max-width:900px;margin:0 auto;background:#fff;border-radius:8px;"
         "box-shadow:0 1px 4px rgba(0,0,0,.08);overflow:hidden;'>"
         "<div style='background:#dc2626;padding:20px 24px;'>"
-        "<h2 style='margin:0;color:#fff;font-size:20px;'>Pinecone Monitor -- {count} issue(s) detected</h2>"
-        "<p style='margin:6px 0 0;color:#fecaca;font-size:13px;'>{now}</p>"
-        "</div>"
-        "<div style='padding:24px;'>"
+        "<h2 style='margin:0;color:#fff;font-size:20px;'>Pinecone Monitor -- {n} issue(s) detected</h2>"
+        "<p style='margin:6px 0 0;color:#fecaca;font-size:13px;'>{t}</p>"
+        "</div><div style='padding:24px;'>"
         "<table style='width:100%;border-collapse:collapse;'>"
         "<thead><tr style='background:#f3f4f6;'>"
-        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;"
-        "border-bottom:2px solid #e5e7eb;'>TYPE</th>"
-        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;"
-        "border-bottom:2px solid #e5e7eb;'>PROJECT</th>"
-        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;"
-        "border-bottom:2px solid #e5e7eb;'>INDEX</th>"
-        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;"
-        "border-bottom:2px solid #e5e7eb;'>DETAILS</th>"
-        "</tr></thead>"
-        "<tbody>{rows}</tbody>"
-        "</table>"
+        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;'>TYPE</th>"
+        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;'>PROJECT</th>"
+        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;'>INDEX</th>"
+        "<th style='padding:10px 12px;text-align:left;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;'>DETAILS</th>"
+        "</tr></thead><tbody>"
+    ).format(n=count, t=now_str)
+
+    footer = (
+        "</tbody></table>"
         "<p style='margin-top:20px;font-size:12px;color:#9ca3af;'>"
         "Sent by Pinecone Monitor | GitHub Actions | DialogIntelligens</p>"
         "</div></div></body></html>"
-    ).format(count=count, now=now_str, rows=rows)
+    )
+
+    return header + rows + footer
 
 
 def send_via_resend(api_key, to_email, from_email, subject, html):
     payload = json.dumps({
-        "from":    "Pinecone Monitor <{}>".format(from_email),
+        "from":    "Pinecone Monitor <" + from_email + ">",
         "to":      [to_email],
         "subject": subject,
         "html":    html,
@@ -366,14 +416,16 @@ def send_via_resend(api_key, to_email, from_email, subject, html):
     req = urllib.request.Request(
         "https://api.resend.com/emails",
         data=payload,
-        headers={"Authorization": "Bearer {}".format(api_key),
-                 "Content-Type": "application/json"},
+        headers={
+            "Authorization": "Bearer " + api_key,
+            "Content-Type": "application/json",
+        },
         method="POST",
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             result = json.loads(resp.read())
-            print("  Email sent via Resend (id={})".format(result.get("id")))
+            print("  Email sent via Resend (id=" + str(result.get("id")) + ")")
             return True
     except urllib.error.HTTPError as e:
         print("  Resend error {}: {}".format(e.code, e.read().decode()))
@@ -383,7 +435,7 @@ def send_via_resend(api_key, to_email, from_email, subject, html):
 def send_via_smtp(host, port, user, password, from_email, to_email, subject, html):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
-    msg["From"]    = "Pinecone Monitor <{}>".format(from_email)
+    msg["From"]    = "Pinecone Monitor <" + from_email + ">"
     msg["To"]      = to_email
     msg.attach(MIMEText(html, "html"))
     try:
@@ -409,7 +461,8 @@ def dispatch_alert(alerts):
     else:
         print("  No email credentials set -- printing summary only")
         for a in alerts:
-            print("  [{}] {}/{}: {}".format(a["type"], a.get("project",""), a.get("index",""), a.get("message","")))
+            print("  [{}] {}/{}: {}".format(
+                a["type"], a.get("project",""), a.get("index",""), a.get("message","")))
         return False
 
 
@@ -425,8 +478,10 @@ def main():
     print("  Alert email  : " + ALERT_EMAIL)
     print("  Drop track   : {:.0%}+ drop starts grace period".format(DROP_THRESHOLD))
     print("  Grace period : {:.0f}h (alert fires only if not recovered)".format(DROP_GRACE_HOURS))
+    print("  Reminder     : {:.0f}h after Alert #1 -> final email, then new baseline".format(REMINDER_HOURS))
     print("  Stale after  : {} days".format(STALE_DAYS))
-    print("  Email via    : {}".format("Resend" if RESEND_API_KEY else ("SMTP" if SMTP_USER else "NOT CONFIGURED")))
+    via = "Resend" if RESEND_API_KEY else ("SMTP" if SMTP_USER else "NOT CONFIGURED")
+    print("  Email via    : " + via)
 
     try:
         projects = json.loads(PROJECTS_JSON)
