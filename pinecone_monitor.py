@@ -13,15 +13,18 @@ HOW DROP DETECTION WORKS (handles delta update pipelines):
   If it recovers in time, nothing is sent. If still low after the grace period,
   you get the alert.
 
-ALERT CADENCE (no spam):
-  1. Drop persists past grace period  -> Alert #1 sent
-  2. Still dropped after REMINDER_HOURS (default 24h) -> Reminder sent, then the
-     current lower count is accepted as the new baseline (resets state).
-  3. No further emails for that drop -- silence until a new drop is detected.
+SPIKE DETECTION works identically but for upward jumps (default 25%+).
+  Same 6h grace period, same 2-email cadence, same rebaseline logic.
+
+ALERT CADENCE (no spam, same for drops and spikes):
+  1. Anomaly persists past grace period  -> Alert #1 sent
+  2. Still anomalous after REMINDER_HOURS (default 24h) -> Reminder sent, then the
+     current count is accepted as the new baseline (resets state).
+  3. No further emails -- silence until a new anomaly is detected.
 
 Alert conditions:
   - Vector count dropped >DROP_THRESHOLD (default 20%) for >DROP_GRACE_HOURS (6h)
-    without recovering  ->  "stuck pipeline"
+  - Vector count spiked >SPIKE_THRESHOLD (default 25%) for >DROP_GRACE_HOURS (6h)
   - Index vector count unchanged for >STALE_DAYS (default 7 days)
   - Index completely empty (0 vectors) for >DROP_GRACE_HOURS without recovering
 
@@ -34,8 +37,9 @@ Required GitHub Actions secrets:
   FROM_EMAIL         -- Sender at your verified domain (e.g. monitor@dialogintelligens.dk)
 
 Optional env vars (with defaults):
-  DROP_THRESHOLD     -- Float (default 0.20 = 20%) -- tracks drops above this size
-  DROP_GRACE_HOURS   -- Float (default 6.0) -- alert fires only if drop lasts this long
+  DROP_THRESHOLD     -- Float (default 0.20 = 20%) -- drop size that starts grace period
+  SPIKE_THRESHOLD    -- Float (default 0.25 = 25%) -- spike size that starts grace period
+  DROP_GRACE_HOURS   -- Float (default 6.0) -- alert fires only if anomaly lasts this long
   REMINDER_HOURS     -- Float (default 24.0) -- hours after Alert #1 before final reminder
   STALE_DAYS         -- Int (default 7) -- alert if count unchanged this many days
 """
@@ -64,6 +68,7 @@ SMTP_USER     = os.environ.get("SMTP_USER",     "")
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
 
 DROP_THRESHOLD   = float(os.environ.get("DROP_THRESHOLD",   "0.20"))
+SPIKE_THRESHOLD  = float(os.environ.get("SPIKE_THRESHOLD",  "0.25"))
 DROP_GRACE_HOURS = float(os.environ.get("DROP_GRACE_HOURS", "6.0"))
 REMINDER_HOURS   = float(os.environ.get("REMINDER_HOURS",   "24.0"))
 STALE_DAYS       = int(os.environ.get("STALE_DAYS",         "7"))
@@ -183,28 +188,35 @@ def check_project(project_name, api_key, state, alerts):
             continue
 
         # --- Load previous state for this index ---
-        prev                = project_state.get(index_name, {})
-        prev_count          = prev.get("last_vector_count")
-        last_changed_iso    = prev.get("last_changed_at")
-        drop_detected_at    = prev.get("drop_detected_at")
-        drop_from_count     = prev.get("drop_from_count")
-        first_alert_sent_at = prev.get("first_alert_sent_at")
+        prev                  = project_state.get(index_name, {})
+        prev_count            = prev.get("last_vector_count")
+        last_changed_iso      = prev.get("last_changed_at")
+        drop_detected_at      = prev.get("drop_detected_at")
+        drop_from_count       = prev.get("drop_from_count")
+        drop_alert_sent_at    = prev.get("drop_alert_sent_at")
+        spike_detected_at     = prev.get("spike_detected_at")
+        spike_from_count      = prev.get("spike_from_count")
+        spike_alert_sent_at   = prev.get("spike_alert_sent_at")
 
-        # --- Is the current count significantly lower than last run? ---
-        is_significant_drop = False
+        # --- Detect significant changes vs previous run ---
+        is_significant_drop  = False
+        is_significant_spike = False
         if prev_count is not None and prev_count > 0:
-            drop_frac = (prev_count - current_count) / prev_count
-            is_significant_drop = (drop_frac >= DROP_THRESHOLD) or (current_count == 0)
+            change_frac = (current_count - prev_count) / prev_count
+            is_significant_drop  = (change_frac <= -DROP_THRESHOLD) or (current_count == 0)
+            is_significant_spike = (change_frac >= SPIKE_THRESHOLD)
         elif prev_count == 0 and current_count == 0 and drop_detected_at:
-            is_significant_drop = True
+            is_significant_drop = True  # still empty, ongoing
 
-        # --- Drop state machine ---
-        do_rebaseline = False
+        # ======================================================================
+        # DROP state machine
+        # ======================================================================
+        do_drop_rebaseline = False
 
         if is_significant_drop and drop_detected_at is None:
             drop_detected_at = now_iso
             drop_from_count  = prev_count
-            print("      [WATCH] Drop detected -- grace period started ({:.0f}h until alert if not recovered)".format(
+            print("      [WATCH-DROP] Drop detected -- grace period started ({:.0f}h until alert)".format(
                 DROP_GRACE_HOURS))
 
         elif drop_detected_at is not None:
@@ -216,17 +228,17 @@ def check_project(project_name, api_key, state, alerts):
             recovered = (current_count >= recovery_floor) and (current_count > 0)
 
             if recovered:
-                print("      [OK] Recovered: {:,} -> {:,} in {:.1f}h -- no alert sent".format(
+                print("      [OK] Drop recovered: {:,} -> {:,} in {:.1f}h -- no alert sent".format(
                     baseline, current_count, hours_elapsed))
-                drop_detected_at    = None
-                drop_from_count     = None
-                first_alert_sent_at = None
+                drop_detected_at   = None
+                drop_from_count    = None
+                drop_alert_sent_at = None
 
             elif hours_elapsed >= DROP_GRACE_HOURS:
                 actual_pct = (baseline - current_count) / baseline if baseline > 0 else 1.0
 
-                if first_alert_sent_at is None:
-                    # Alert #1 -- grace period expired
+                if drop_alert_sent_at is None:
+                    # Alert #1
                     if current_count == 0:
                         msg        = "Index empty for {:.0f}h (was {:,} vectors) -- pipeline may be stuck".format(
                             hours_elapsed, baseline)
@@ -246,14 +258,14 @@ def check_project(project_name, api_key, state, alerts):
                         "hours_elapsed":  round(hours_elapsed, 1),
                         "message":        msg,
                     })
-                    first_alert_sent_at = now_iso
+                    drop_alert_sent_at = now_iso
 
                 else:
-                    first_sent_dt     = datetime.fromisoformat(first_alert_sent_at)
-                    hours_since_alert = (now_dt - first_sent_dt).total_seconds() / 3600
+                    sent_dt           = datetime.fromisoformat(drop_alert_sent_at)
+                    hours_since_alert = (now_dt - sent_dt).total_seconds() / 3600
 
                     if hours_since_alert >= REMINDER_HOURS:
-                        # Final reminder -- then rebaseline, no more emails
+                        # Final reminder then rebaseline
                         if current_count == 0:
                             msg        = "Still empty for {:.0f}h (was {:,} vectors) -- accepting as new state".format(
                                 hours_elapsed, baseline)
@@ -273,24 +285,103 @@ def check_project(project_name, api_key, state, alerts):
                             "hours_elapsed":  round(hours_elapsed, 1),
                             "message":        msg,
                         })
-                        do_rebaseline = True
-
+                        do_drop_rebaseline = True
                     else:
-                        remaining_reminder = REMINDER_HOURS - hours_since_alert
-                        print("      [QUIET] Alert sent {:.1f}h ago -- reminder in {:.1f}h, then new baseline".format(
-                            hours_since_alert, remaining_reminder))
+                        remaining = REMINDER_HOURS - hours_since_alert
+                        print("      [QUIET] Drop alert sent {:.1f}h ago -- reminder in {:.1f}h, then new baseline".format(
+                            hours_since_alert, remaining))
 
             else:
                 remaining = DROP_GRACE_HOURS - hours_elapsed
                 print("      [WAIT] Drop ongoing -- {:.1f}h elapsed, {:.1f}h until alert".format(
                     hours_elapsed, remaining))
 
-        else:
-            if prev_count is not None:
+        # ======================================================================
+        # SPIKE state machine (mirrors drop logic exactly)
+        # ======================================================================
+        do_spike_rebaseline = False
+
+        if is_significant_spike and spike_detected_at is None:
+            spike_detected_at = now_iso
+            spike_from_count  = prev_count
+            print("      [WATCH-SPIKE] Spike detected -- grace period started ({:.0f}h until alert)".format(
+                DROP_GRACE_HOURS))
+
+        elif spike_detected_at is not None:
+            detected_dt   = datetime.fromisoformat(spike_detected_at)
+            hours_elapsed = (now_dt - detected_dt).total_seconds() / 3600
+            baseline      = spike_from_count or 0
+
+            recovery_ceil = baseline * (1 + SPIKE_THRESHOLD)
+            recovered = (current_count <= recovery_ceil) and (current_count > 0)
+
+            if recovered:
+                print("      [OK] Spike recovered: {:,} -> {:,} in {:.1f}h -- no alert sent".format(
+                    baseline, current_count, hours_elapsed))
+                spike_detected_at   = None
+                spike_from_count    = None
+                spike_alert_sent_at = None
+
+            elif hours_elapsed >= DROP_GRACE_HOURS:
+                actual_pct = (current_count - baseline) / baseline if baseline > 0 else 1.0
+
+                if spike_alert_sent_at is None:
+                    # Alert #1
+                    msg        = "Up {:.1%} for {:.0f}h ({:,} -> {:,}) -- unexpected spike".format(
+                        actual_pct, hours_elapsed, baseline, current_count)
+                    alert_type = "big_spike"
+                    print("      [ALERT] " + msg)
+                    alerts.append({
+                        "type":           alert_type,
+                        "project":        project_name,
+                        "index":          index_name,
+                        "previous_count": baseline,
+                        "current_count":  current_count,
+                        "spike_pct":      round(actual_pct * 100, 1),
+                        "hours_elapsed":  round(hours_elapsed, 1),
+                        "message":        msg,
+                    })
+                    spike_alert_sent_at = now_iso
+
+                else:
+                    sent_dt           = datetime.fromisoformat(spike_alert_sent_at)
+                    hours_since_alert = (now_dt - sent_dt).total_seconds() / 3600
+
+                    if hours_since_alert >= REMINDER_HOURS:
+                        # Final reminder then rebaseline
+                        actual_pct = (current_count - baseline) / baseline if baseline > 0 else 1.0
+                        msg        = "Reminder: still up {:.1%} for {:.0f}h ({:,} -> {:,}) -- accepting {:,} as new baseline".format(
+                            actual_pct, hours_elapsed, baseline, current_count, current_count)
+                        alert_type = "spike_reminder"
+                        print("      [REMINDER] " + msg)
+                        alerts.append({
+                            "type":           alert_type,
+                            "project":        project_name,
+                            "index":          index_name,
+                            "previous_count": baseline,
+                            "current_count":  current_count,
+                            "spike_pct":      round(actual_pct * 100, 1),
+                            "hours_elapsed":  round(hours_elapsed, 1),
+                            "message":        msg,
+                        })
+                        do_spike_rebaseline = True
+                    else:
+                        remaining = REMINDER_HOURS - hours_since_alert
+                        print("      [QUIET] Spike alert sent {:.1f}h ago -- reminder in {:.1f}h, then new baseline".format(
+                            hours_since_alert, remaining))
+
+            else:
+                remaining = DROP_GRACE_HOURS - hours_elapsed
+                print("      [WAIT] Spike ongoing -- {:.1f}h elapsed, {:.1f}h until alert".format(
+                    hours_elapsed, remaining))
+
+        # --- Print OK if nothing unusual ---
+        if drop_detected_at is None and spike_detected_at is None and prev_count is not None:
+            if not is_significant_drop and not is_significant_spike:
                 print("      [OK]")
 
-        # --- Stale check (only when not in a drop phase) ---
-        if drop_detected_at is None and last_changed_iso and current_count == prev_count:
+        # --- Stale check (only when no anomaly is active) ---
+        if drop_detected_at is None and spike_detected_at is None and last_changed_iso and current_count == prev_count:
             last_changed_dt   = datetime.fromisoformat(last_changed_iso)
             days_since_change = (now_dt - last_changed_dt).days
             if days_since_change >= STALE_DAYS:
@@ -308,14 +399,17 @@ def check_project(project_name, api_key, state, alerts):
                 })
 
         # --- Update state ---
-        if do_rebaseline:
+        if do_drop_rebaseline or do_spike_rebaseline:
             project_state[index_name] = {
-                "last_vector_count":   current_count,
-                "last_changed_at":     now_iso,
-                "last_checked_at":     now_iso,
-                "drop_detected_at":    None,
-                "drop_from_count":     None,
-                "first_alert_sent_at": None,
+                "last_vector_count":  current_count,
+                "last_changed_at":    now_iso,
+                "last_checked_at":    now_iso,
+                "drop_detected_at":   None,
+                "drop_from_count":    None,
+                "drop_alert_sent_at": None,
+                "spike_detected_at":  None,
+                "spike_from_count":   None,
+                "spike_alert_sent_at": None,
             }
         else:
             if prev_count is None:
@@ -331,7 +425,10 @@ def check_project(project_name, api_key, state, alerts):
                 "last_checked_at":     now_iso,
                 "drop_detected_at":    drop_detected_at,
                 "drop_from_count":     drop_from_count,
-                "first_alert_sent_at": first_alert_sent_at,
+                "drop_alert_sent_at":  drop_alert_sent_at,
+                "spike_detected_at":   spike_detected_at,
+                "spike_from_count":    spike_from_count,
+                "spike_alert_sent_at": spike_alert_sent_at,
             }
 
     for gone in list(project_state.keys()):
@@ -349,6 +446,8 @@ def build_html_email(alerts):
         "empty_index":         ("#dc2626", "Empty Index"),
         "big_drop":            ("#ea580c", "Drop Not Recovering"),
         "drop_reminder":       ("#7c3aed", "Drop Reminder (final)"),
+        "big_spike":           ("#0891b2", "Unexpected Spike"),
+        "spike_reminder":      ("#6d28d9", "Spike Reminder (final)"),
         "stale_index":         ("#ca8a04", "Stale - No Updates"),
         "unreachable_index":   ("#6b7280", "Unreachable Index"),
         "unreachable_project": ("#374151", "Unreachable Project"),
@@ -477,7 +576,8 @@ def main():
     print("=" * 55)
     print("  Alert email  : " + ALERT_EMAIL)
     print("  Drop track   : {:.0%}+ drop starts grace period".format(DROP_THRESHOLD))
-    print("  Grace period : {:.0f}h (alert fires only if not recovered)".format(DROP_GRACE_HOURS))
+    print("  Spike track  : {:.0%}+ spike starts grace period".format(SPIKE_THRESHOLD))
+    print("  Grace period : {:.0f}h (alert fires only if anomaly persists)".format(DROP_GRACE_HOURS))
     print("  Reminder     : {:.0f}h after Alert #1 -> final email, then new baseline".format(REMINDER_HOURS))
     print("  Stale after  : {} days".format(STALE_DAYS))
     via = "Resend" if RESEND_API_KEY else ("SMTP" if SMTP_USER else "NOT CONFIGURED")
