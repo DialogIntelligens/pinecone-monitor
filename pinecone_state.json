@@ -1,2243 +1,3503 @@
 {
   "BAP": {
     "bap-alt-ch": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 85
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 84,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-de": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 88
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 79,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-dk": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 120
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 114,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-eu": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 70
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 67,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-int": {
-      "drop_detected_at": null,
-      "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 68
+      "drop_alert_sent_at": null,
+      "drop_detected_at": "2026-04-19T10:45:10.655027+00:00",
+      "drop_from_count": 68,
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 36,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-nl": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 82
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 70,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-no": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 55
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 57,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-16T13:34:44.016470+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 85
+      "last_changed_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 82,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-ch-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9279
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9279,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-de-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9280
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9280,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-dk-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9283
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9283,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-eu-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9280
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9280,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-int-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9280
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9280,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-nl-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9280
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9280,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-no-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9285
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9285,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bap-pro-se-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:51.964471+00:00",
-      "last_checked_at": "2026-04-19T09:01:39.483585+00:00",
-      "last_vector_count": 9325
+      "last_checked_at": "2026-04-19T10:45:10.655027+00:00",
+      "last_vector_count": 9325,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "Default": {
     "alexcykler-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 34
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 34,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "alexcykler-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:45:53.874664+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 7806
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 7806,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "body": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 445
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 445,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodyaltfi": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:24:02.365809+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 348
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 348,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodyaltno": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:08.592452+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 353
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 353,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodyaltse": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:08.592452+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 350
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 350,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodylab-opskrifter": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 254
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 254,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodylabpro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T02:54:09.959842+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 359
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 359,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodylabprofi": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:24:02.365809+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 339
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 339,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodylabprono": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:08.592452+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 345
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 345,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bodylabprose": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:08.592452+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 343
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 343,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "fitnessgruppen-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 116
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 116,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "fitnessgruppen-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 932
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 932,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "hk-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 464
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 464,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "jagttegn": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "kystfisker": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 254
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 254,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "tooloutlet-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 25
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 25,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "tooloutlet-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 81615
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 81615,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "washworld": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:10.075956+00:00",
-      "last_checked_at": "2026-04-19T09:01:03.930828+00:00",
-      "last_vector_count": 531
+      "last_checked_at": "2026-04-19T10:44:40.557751+00:00",
+      "last_vector_count": 531,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "ICHI": {
     "ichi-alt-ch": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 11
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 11,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-de": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 17
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 17,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-dk": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 11
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 11,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-eu": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 12
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 12,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-fr": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 13
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 13,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-int": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 12
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 12,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-nl": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 11
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 11,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-no": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 9
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 9,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:34.177819+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 10
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 10,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-ch-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2797
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2797,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-de-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-dk-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2797
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2797,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-eu-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-fr-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-int-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-nl-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-no-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ichi-pro-se-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:41.871026+00:00",
-      "last_checked_at": "2026-04-19T09:01:29.087124+00:00",
-      "last_vector_count": 2799
+      "last_checked_at": "2026-04-19T10:45:01.510379+00:00",
+      "last_vector_count": 2799,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "Matinique": {
     "matinique-alt-be": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-ch": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:24.447663+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 15
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 15,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-de": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-dk": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 18
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 18,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-eu": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-int": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-nl": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 15
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 15,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-no": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-be-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-ch-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1563
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1563,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-de-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-dk-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1366
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1366,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-eu-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-int-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1572
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1572,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-nl-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-no-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "matinique-pro-se-2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:46:10.424415+00:00",
-      "last_checked_at": "2026-04-19T09:01:18.611183+00:00",
-      "last_vector_count": 1569
+      "last_checked_at": "2026-04-19T10:44:52.651061+00:00",
+      "last_vector_count": 1569,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "boozt": {
     "boozt-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 111
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 111,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-beauty-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-collection-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-fashion-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-home-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-kids-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:34:21.349379+00:00",
-      "last_checked_at": "2026-04-19T09:01:14.787160+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:49.586672+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny": {
     "aarstiderne-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 209
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 209,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "aarstiderne-kasser": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 29
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 29,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "aarstiderne-opskrifter": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:43:19.512111+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 2968
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 2968,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dilling-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:09.590911+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 304
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 304,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dilling-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 175
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 175,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dilling-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:43:19.512111+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 1176
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 1176,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dktrimmer-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T13:26:13.326191+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 228
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 228,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "frydensberg-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "jagtogvildt-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 211
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 211,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "jagtogvildt-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 2267
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 2267,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nih-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T16:57:13.337802+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 58
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 58,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "superprice-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": "2026-04-19T08:58:49.962179+00:00",
       "drop_from_count": 137,
       "last_changed_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 92
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 92,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "superprice-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:22:19.369404+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 1462
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 1462,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "validahealth": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T11:39:07.100730+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 177
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 177,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "validahealth-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T16:46:33.494796+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 207
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 207,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "washworld-de": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T16:57:13.337802+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 162
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 162,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "washworld-no": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T19:21:15.840471+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 167
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 167,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "washworld-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T16:57:13.337802+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 187
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 187,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "washworld1": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:13:57.138186+00:00",
-      "last_checked_at": "2026-04-19T08:58:49.962179+00:00",
-      "last_vector_count": 254
+      "last_checked_at": "2026-04-19T10:42:42.381978+00:00",
+      "last_vector_count": 254,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny1": {
     "bevco-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 192
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 192,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bevco-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:14:06.533713+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 2008
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 2008,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boligoghaven-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boligoghaven-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:00:12.107209+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 4646
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 4646,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dktrimmer-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 107
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 107,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dktrimmer-spe": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 597
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 597,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ejendrom-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T14:59:03.995318+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 249
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 249,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T13:26:22.867360+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 1099
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 1099,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-no-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 686
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 686,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-no-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:00:43.353636+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 13718
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 13718,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T17:19:36.005278+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 6256
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 6256,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-se-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T22:39:03.437895+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 743
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 743,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "linaa-se-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T02:42:14.517563+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 5209
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 5209,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "mundret-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 205
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 205,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nytelse-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 182
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 182,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nytelse-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 3002
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 3002,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "pursico-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 14
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 14,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "sexshop-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 299
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 299,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "sexshop-pro": {
+      "drop_alert_sent_at": "2026-04-19T10:42:52.101938+00:00",
       "drop_detected_at": "2026-04-18T13:09:35.312505+00:00",
       "drop_from_count": 39,
       "last_changed_at": "2026-04-18T13:09:35.312505+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 31
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 31,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skolenfri-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:17.395105+00:00",
-      "last_checked_at": "2026-04-19T08:59:01.793374+00:00",
-      "last_vector_count": 135
+      "last_checked_at": "2026-04-19T10:42:52.101938+00:00",
+      "last_vector_count": 135,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny10": {
     "damaskde-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damaskde-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T05:44:10.421242+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 523
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 523,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damasken-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damasken-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T02:43:53.229884+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 519
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 519,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damasknl-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damasknl-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T02:43:53.229884+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 530
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 530,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damaskno-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damaskno-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T02:43:53.229884+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 526
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 526,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damaskse-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damaskse-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:43.000479+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 521
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 521,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "havehandel-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 499
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 499,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "havehandel-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T02:53:43.017281+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 886
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 886,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-helsingor-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:02:39.832553+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-helsingor-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T06:07:11.046698+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 36
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 36,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-hjorring-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T05:44:10.421242+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 16
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 16,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-hjorring-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T06:07:11.046698+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 35
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 35,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-ringsted-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 23
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 23,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-ringsted-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T05:44:10.421242+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 46
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 46,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-slagelse-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:48.139956+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 22
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 22,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-slagelse-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:52.890488+00:00",
-      "last_checked_at": "2026-04-19T09:00:39.961177+00:00",
-      "last_vector_count": 47
+      "last_checked_at": "2026-04-19T10:44:18.765779+00:00",
+      "last_vector_count": 47,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny11": {
     "babysam-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T15:45:29.738216+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 329
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 329,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "babysam-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T17:21:13.102630+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 8056
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 8056,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-alt-dev": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 6
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 6,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 129
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 129,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-beauty-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:04.626422+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 17273
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 17273,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-collection-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 24333
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 24333,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-fashion-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:04.626422+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 87943
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 87943,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-home-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:04.626422+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 18662
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 18662,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-kids-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:02:04.626422+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 41464
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 41464,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "elbutik-se-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 38
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 38,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "elbutik-se-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 8277
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 8277,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "liiteguard-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 208
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 208,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "liiteguard-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 200
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 200,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nicehair-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 67
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 67,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nicehair-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 20181
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 20181,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nicehair-pro2": {
-      "drop_detected_at": "2026-04-19T09:00:51.380829+00:00",
-      "drop_from_count": 20185,
-      "last_changed_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 7596
+      "drop_alert_sent_at": null,
+      "drop_detected_at": null,
+      "drop_from_count": null,
+      "last_changed_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 20197,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": "2026-04-19T10:44:28.931698+00:00",
+      "spike_from_count": 7596
     },
     "puhdistamo-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 18
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 18,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "puhdistamo-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 171
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 171,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ricebyrice-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:59.458895+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 30
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 30,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ricebyrice-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T17:21:13.102630+00:00",
-      "last_checked_at": "2026-04-19T09:00:51.380829+00:00",
-      "last_vector_count": 433
+      "last_checked_at": "2026-04-19T10:44:28.931698+00:00",
+      "last_vector_count": 433,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny12": {
     "loplabbet-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:06.490613+00:00",
-      "last_checked_at": "2026-04-19T09:01:02.086975+00:00",
-      "last_vector_count": 156
+      "last_checked_at": "2026-04-19T10:44:38.959275+00:00",
+      "last_vector_count": 156,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "loplabbet-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T15:01:22.317504+00:00",
-      "last_checked_at": "2026-04-19T09:01:02.086975+00:00",
-      "last_vector_count": 2989
+      "last_checked_at": "2026-04-19T10:44:38.959275+00:00",
+      "last_vector_count": 2989,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "svomdanmark-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:03:06.490613+00:00",
-      "last_checked_at": "2026-04-19T09:01:02.086975+00:00",
-      "last_vector_count": 168
+      "last_checked_at": "2026-04-19T10:44:38.959275+00:00",
+      "last_vector_count": 168,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny2": {
     "dillingde-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 288
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 288,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingde-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:14:15.153901+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1151
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1151,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingeu-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 258
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 258,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingeu-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 12
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 12,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingeu-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1179
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1179,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfr-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 279
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 279,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfr-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 14
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 14,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfr-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:14:15.153901+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1191
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1191,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingnl-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 277
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 277,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingnl-pro2": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1078
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1078,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingpl-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 219
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 219,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingpl-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:22:36.957966+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1170
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1170,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillinguk-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 282
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 282,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillinguk-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 14
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 14,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillinguk-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:22:36.957966+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1175
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1175,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingus-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:28.277380+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 246
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 246,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingus-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 11
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 11,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingus-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T18:56:48.425961+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 1182
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 1182,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "virtooai": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:27.765189+00:00",
-      "last_checked_at": "2026-04-19T08:59:12.515822+00:00",
-      "last_vector_count": 11
+      "last_checked_at": "2026-04-19T10:43:01.203664+00:00",
+      "last_vector_count": 11,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny3": {
     "calle-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 113
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 113,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "calle-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:00:34.041272+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 6049
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 6049,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingch-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:37.561035+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 257
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 257,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingch-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 9
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 9,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingch-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:22:45.072230+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 1204
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 1204,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfi-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:37.561035+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 266
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 266,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfi-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 9
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 9,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingfi-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:43:57.057123+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 1142
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 1142,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingno-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:37.561035+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 253
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 253,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingno-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 7
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 7,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingno-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 1185
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 1185,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingse-faq": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:58:37.561035+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 322
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 322,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingse-kat": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 12
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 12,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dillingse-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 1178
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 1178,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "fleggaard-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 113
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 113,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "fleggaard-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 6128
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 6128,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:43:57.057123+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 294
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 294,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-lager": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:00:34.041272+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 8300
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 8300,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:37.602375+00:00",
-      "last_checked_at": "2026-04-19T08:59:23.123163+00:00",
-      "last_vector_count": 8267
+      "last_checked_at": "2026-04-19T10:43:10.598161+00:00",
+      "last_vector_count": 8267,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny4": {
     "aiasound-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 86
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 86,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "aida": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 42
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 42,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "aida-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T13:26:47.544481+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 1043
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 1043,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bevco-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T13:26:47.544481+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 663
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 663,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "bevco-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 60
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 60,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "change-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 113
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 113,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "change-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 570
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 570,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dtu-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 97
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 97,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "gugplanteskole-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 326
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 326,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "gugplanteskole-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 3622
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 3622,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "kirurgiklinik": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "koreskolenpaatoppen": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "lahair-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 21
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 21,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "marienlyst-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 135
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 135,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-lager": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 9187
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 9187,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "suntribesunscreen-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 80
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 80,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "suntribesunscreen-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 40
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 40,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "yaay-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T13:26:47.544481+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 94
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 94,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "yaay-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:47.157431+00:00",
-      "last_checked_at": "2026-04-19T08:59:33.672946+00:00",
-      "last_vector_count": 55
+      "last_checked_at": "2026-04-19T10:43:19.963525+00:00",
+      "last_vector_count": 55,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny5": {
     "beauty-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 176
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 176,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 11365
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 11365,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "diturdk-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 16332
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 16332,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dtu-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 316
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 316,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "greencargear-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 119
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 119,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "greencargear-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T08:56:29.856832+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 1152
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 1152,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "humac-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T17:20:13.760731+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 124
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 124,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "humac-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T19:06:28.409074+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 764
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 764,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "netbyggemarked-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:00:55.902474+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 38
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 38,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "netbyggemarked-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:14:39.153978+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 31665
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 31665,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "netbyggemarked-products": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 31299
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 31299,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "purepower-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 150
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 150,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "purepower-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 52
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 52,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "saxo-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 121
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 121,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "storeandstefterskole-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 81
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 81,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vibholm-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T07:44:21.445517+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 172
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 172,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vibholm-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T18:57:16.709894+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 45862
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 45862,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:32:57.102174+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 152
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 152,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T07:14:39.153978+00:00",
-      "last_checked_at": "2026-04-19T08:59:44.422168+00:00",
-      "last_vector_count": 464
+      "last_checked_at": "2026-04-19T10:43:29.623178+00:00",
+      "last_vector_count": 464,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny6": {
     "boozt-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 127
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 127,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-beauty-pro-ny": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 16634
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 16634,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-collection": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 18108
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 18108,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-fashion-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T06:06:31.113028+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 78462
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 78462,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-home-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 18708
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 18708,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-kids-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 41151
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 41151,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "boozt-total-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 35414
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 35414,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damask-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damask-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-18T10:45:44.423484+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 482
+      "last_changed_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 484,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "loebeshop-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 132
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 132,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "loebeshop-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 6601
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 6601,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "masai-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 37
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 37,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "masai-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 761
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 761,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nocla-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-18T02:43:08.582900+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 54
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 54,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "regnskabsskolen-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:06.988529+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 66
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 66,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "storcenternord-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 71
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 71,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-alt-fi": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:05.418620+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 128
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 128,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:05.418620+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 58
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 58,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-pro-fi": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 407
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 407,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhuset-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:07.790036+00:00",
-      "last_checked_at": "2026-04-19T08:59:55.362991+00:00",
-      "last_vector_count": 386
+      "last_checked_at": "2026-04-19T10:43:39.318141+00:00",
+      "last_vector_count": 386,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny7": {
     "brogaarden-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 201
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 201,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "brogaarden-alt-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 91
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 91,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "brogaarden-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T22:44:09.223644+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 2424
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 2424,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "brogaarden-pro-se": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 1092
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 1092,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ecooking-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T16:58:21.447475+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 145
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 145,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ecooking-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T16:58:21.447475+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 988
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 988,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "imerco-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:14.880154+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 136
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 136,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "imerco-lager": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 24125
+      "last_changed_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 24047,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "imerco-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 698
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 698,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "intersport-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 391
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 391,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "intersport-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T09:23:18.357246+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 14221
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 14221,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "kso-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
-      "last_changed_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 294
+      "last_changed_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 309,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "kso-pro": {
+      "drop_alert_sent_at": "2026-04-19T10:43:49.298943+00:00",
       "drop_detected_at": "2026-04-17T15:00:18.835803+00:00",
       "drop_from_count": 5137,
       "last_changed_at": "2026-04-18T13:10:33.766736+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 2640
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 2640,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 20
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 20,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "moviehouse-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:19.246806+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 37
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 37,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "nocla-chef": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 394
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 394,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "togrejsereuropa-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:14.880154+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 259
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 259,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "togrejsereuropa-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 181
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 181,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhusetnl-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:17.154067+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 143
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 143,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "vinhusetnl-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:14.880154+00:00",
-      "last_checked_at": "2026-04-19T09:00:06.799558+00:00",
-      "last_vector_count": 301
+      "last_checked_at": "2026-04-19T10:43:49.298943+00:00",
+      "last_vector_count": 301,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny8": {
     "dafolo-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 86
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 86,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dafolo-boghandler": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 28
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 28,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "dafolo-intern": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 83
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 83,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-de-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 149
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 149,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-de-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 8300
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 8300,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-no-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 145
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 145,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-no-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 10853
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 10853,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-se-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 148
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 148,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "ditur-se-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 11471
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 11471,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "globestudios-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 61
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 61,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "globestudios-com-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 56
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 56,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "globestudios-com-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 148
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 148,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "globestudios-pro": {
+      "drop_alert_sent_at": "2026-04-19T10:43:59.282143+00:00",
       "drop_detected_at": "2026-04-17T02:53:17.184451+00:00",
       "drop_from_count": 200,
       "last_changed_at": "2026-04-17T02:53:17.184451+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 151
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 151,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-lager": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 7357
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 7357,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-lager-no": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:24.377723+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 5452
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 5452,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-no-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 392
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 392,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "skoringen-no-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 5446
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 5446,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "whiteaway-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 9
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 9,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "whiteaway-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:27.137093+00:00",
-      "last_checked_at": "2026-04-19T09:00:18.203250+00:00",
-      "last_vector_count": 279
+      "last_checked_at": "2026-04-19T10:43:59.282143+00:00",
+      "last_vector_count": 279,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   },
   "teamny9": {
     "babyinstituttet-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 794
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 794,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "babyinstituttet-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "billetto-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 39
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 39,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "billetto-alt-forbrug": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 140
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 140,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "billetto-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 1994
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 1994,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "billigwallsticker-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 30
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 30,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "billigwallsticker-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:02:26.816541+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 109
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 109,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "cec-fi-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 4
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 4,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "cec-fi-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:41.870446+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 1389
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 1389,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "damasknl-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 0
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 0,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "lemu-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 350
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 350,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "lemu-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 549588
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 549588,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "naturbutikken-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 34
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 34,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "naturbutikken-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 1978
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 1978,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "odento-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-16T13:33:37.580363+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 2292
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 2292,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "opladere-alt": {
+      "drop_alert_sent_at": "2026-04-19T10:44:08.742571+00:00",
       "drop_detected_at": "2026-04-17T11:02:26.816541+00:00",
       "drop_from_count": 49,
       "last_changed_at": "2026-04-17T11:02:26.816541+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 38
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 38,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "opladere-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T11:02:26.816541+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 1169
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 1169,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "sport24-alt": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-17T02:53:29.867355+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 145
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 145,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "sport24-lager": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T02:59:33.654737+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 19072
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 19072,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     },
     "sport24-pro": {
+      "drop_alert_sent_at": null,
       "drop_detected_at": null,
       "drop_from_count": null,
       "last_changed_at": "2026-04-19T06:01:41.870446+00:00",
-      "last_checked_at": "2026-04-19T09:00:28.989330+00:00",
-      "last_vector_count": 13276
+      "last_checked_at": "2026-04-19T10:44:08.742571+00:00",
+      "last_vector_count": 13276,
+      "spike_alert_sent_at": null,
+      "spike_detected_at": null,
+      "spike_from_count": null
     }
   }
 }
