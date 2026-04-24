@@ -22,10 +22,13 @@ ALERT CADENCE (no spam, same for drops and spikes):
      current count is accepted as the new baseline (resets state).
   3. No further emails -- silence until a new anomaly is detected.
 
+STALE ALERTS: fires once when count unchanged for >STALE_DAYS. Then silent
+  until the index actually gets new vectors (which resets the stale state).
+
 Alert conditions:
   - Vector count dropped >DROP_THRESHOLD (default 20%) for >DROP_GRACE_HOURS (6h)
   - Vector count spiked >SPIKE_THRESHOLD (default 25%) for >DROP_GRACE_HOURS (6h)
-  - Index vector count unchanged for >STALE_DAYS (default 7 days)
+  - Index vector count unchanged for >STALE_DAYS (default 7 days) -- fires once
   - Index completely empty (0 vectors) for >DROP_GRACE_HOURS without recovering
 
 Email is sent via Resend (https://resend.com) -- free account, verify your domain.
@@ -197,6 +200,7 @@ def check_project(project_name, api_key, state, alerts):
         spike_detected_at     = prev.get("spike_detected_at")
         spike_from_count      = prev.get("spike_from_count")
         spike_alert_sent_at   = prev.get("spike_alert_sent_at")
+        stale_alert_sent_at   = prev.get("stale_alert_sent_at")
 
         # --- Detect significant changes vs previous run ---
         is_significant_drop  = False
@@ -380,44 +384,54 @@ def check_project(project_name, api_key, state, alerts):
             if not is_significant_drop and not is_significant_spike:
                 print("      [OK]")
 
-        # --- Stale check (only when no anomaly is active) ---
+        # ======================================================================
+        # STALE check (only when no anomaly active -- fires once, then silent)
+        # ======================================================================
         if drop_detected_at is None and spike_detected_at is None and last_changed_iso and current_count == prev_count:
             last_changed_dt   = datetime.fromisoformat(last_changed_iso)
             days_since_change = (now_dt - last_changed_dt).days
             if days_since_change >= STALE_DAYS:
-                msg = "No change for {} days (count: {:,}) -- updates may have stopped".format(
-                    days_since_change, current_count)
-                print("      [ALERT] STALE -- " + msg)
-                alerts.append({
-                    "type":          "stale_index",
-                    "project":       project_name,
-                    "index":         index_name,
-                    "current_count": current_count,
-                    "days_stale":    days_since_change,
-                    "last_changed":  last_changed_iso,
-                    "message":       msg,
-                })
+                if stale_alert_sent_at is None:
+                    msg = "No change for {} days (count: {:,}) -- updates may have stopped".format(
+                        days_since_change, current_count)
+                    print("      [ALERT] STALE -- " + msg)
+                    alerts.append({
+                        "type":          "stale_index",
+                        "project":       project_name,
+                        "index":         index_name,
+                        "current_count": current_count,
+                        "days_stale":    days_since_change,
+                        "last_changed":  last_changed_iso,
+                        "message":       msg,
+                    })
+                    stale_alert_sent_at = now_iso
+                else:
+                    print("      [QUIET] Stale -- already alerted, silent until index changes")
 
         # --- Update state ---
         if do_drop_rebaseline or do_spike_rebaseline:
             project_state[index_name] = {
-                "last_vector_count":  current_count,
-                "last_changed_at":    now_iso,
-                "last_checked_at":    now_iso,
-                "drop_detected_at":   None,
-                "drop_from_count":    None,
-                "drop_alert_sent_at": None,
-                "spike_detected_at":  None,
-                "spike_from_count":   None,
+                "last_vector_count":   current_count,
+                "last_changed_at":     now_iso,
+                "last_checked_at":     now_iso,
+                "drop_detected_at":    None,
+                "drop_from_count":     None,
+                "drop_alert_sent_at":  None,
+                "spike_detected_at":   None,
+                "spike_from_count":    None,
                 "spike_alert_sent_at": None,
+                "stale_alert_sent_at": None,
             }
         else:
             if prev_count is None:
                 new_last_changed = now_iso
+                new_stale_alert  = None           # first run
             elif current_count != prev_count:
                 new_last_changed = now_iso
+                new_stale_alert  = None           # count moved, reset stale
             else:
                 new_last_changed = last_changed_iso
+                new_stale_alert  = stale_alert_sent_at  # unchanged, preserve
 
             project_state[index_name] = {
                 "last_vector_count":   current_count,
@@ -429,6 +443,7 @@ def check_project(project_name, api_key, state, alerts):
                 "spike_detected_at":   spike_detected_at,
                 "spike_from_count":    spike_from_count,
                 "spike_alert_sent_at": spike_alert_sent_at,
+                "stale_alert_sent_at": new_stale_alert,
             }
 
     for gone in list(project_state.keys()):
@@ -579,7 +594,7 @@ def main():
     print("  Spike track  : {:.0%}+ spike starts grace period".format(SPIKE_THRESHOLD))
     print("  Grace period : {:.0f}h (alert fires only if anomaly persists)".format(DROP_GRACE_HOURS))
     print("  Reminder     : {:.0f}h after Alert #1 -> final email, then new baseline".format(REMINDER_HOURS))
-    print("  Stale after  : {} days".format(STALE_DAYS))
+    print("  Stale after  : {} days (fires once, then silent until index changes)".format(STALE_DAYS))
     via = "Resend" if RESEND_API_KEY else ("SMTP" if SMTP_USER else "NOT CONFIGURED")
     print("  Email via    : " + via)
 
