@@ -8,6 +8,8 @@
 #
 #    PINECONE_PROJECTS  - JSON array with all project names and API keys
 #    RESEND_API_KEY     - Get a free key at https://resend.com
+#    ROUTINE_WEBHOOK_URL   - Claude Code Routine endpoint (optional, enables agentic fixes)
+#    ROUTINE_WEBHOOK_TOKEN - Bearer token for the Routine webhook
 #    ALERT_EMAIL        - Where to send alerts, e.g. nicholas@dialogintelligens.dk
 #    FROM_EMAIL         - Sender address at your verified domain
 #
@@ -69,6 +71,9 @@ jobs:
           DROP_THRESHOLD:    "0.20"
           DROP_GRACE_HOURS:  "6"
           STALE_DAYS:        "7"
+          ROUTINE_WEBHOOK_URL:   ${{ secrets.ROUTINE_WEBHOOK_URL }}
+          ROUTINE_WEBHOOK_TOKEN: ${{ secrets.ROUTINE_WEBHOOK_TOKEN }}
+          RESEND_API_KEY:        ${{ secrets.RESEND_API_KEY }}
         run: python pinecone_monitor.py
 
       # 5. Commit updated state file back to repo

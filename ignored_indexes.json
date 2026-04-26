@@ -1,0 +1,28 @@
+{
+  "_comment": "Indexes/projects to skip in monitoring. Format options:",
+  "_format": {
+    "project_wildcard": "\"project_name\": \"*\"  -- ignore entire project",
+    "specific_indexes": "\"project_name\": [\"index1\", \"index2\"]  -- ignore specific indexes",
+    "global_list":      "add index name to __global__ to ignore regardless of project"
+  },
+  "__global__": [],
+  "teamny": [],
+  "teamny1": [],
+  "teamny2": [],
+  "teamny3": [],
+  "teamny4": [],
+  "teamny5": [],
+  "teamny6": [],
+  "teamny7": [],
+  "teamny8": [],
+  "teamny9": [],
+  "teamny10": [],
+  "teamny11": [],
+  "teamny12": [],
+  "teamnyeste5": [],
+  "Default": [],
+  "boozt": [],
+  "Matinique": "*",
+  "ICHI": "*",
+  "BAP": "*"
+}

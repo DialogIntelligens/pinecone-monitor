@@ -77,7 +77,12 @@ REMINDER_HOURS   = float(os.environ.get("REMINDER_HOURS",   "24.0"))
 STALE_DAYS       = int(os.environ.get("STALE_DAYS",         "7"))
 
 PROJECTS_JSON = os.environ.get("PINECONE_PROJECTS", "[]")
-STATE_FILE    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pinecone_state.json")
+STATE_FILE           = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pinecone_state.json")
+IGNORED_FILE         = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ignored_indexes.json")
+
+# Claude Code Routine webhook (optional — set these secrets to enable agentic fixes)
+ROUTINE_WEBHOOK_URL   = os.environ.get("ROUTINE_WEBHOOK_URL",   "")
+ROUTINE_WEBHOOK_TOKEN = os.environ.get("ROUTINE_WEBHOOK_TOKEN", "")
 
 PINECONE_API_BASE = "https://api.pinecone.io"
 
@@ -456,6 +461,82 @@ def check_project(project_name, api_key, state, alerts):
 # Email
 # ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------
+# Ignored indexes
+# ------------------------------------------------------------------------------
+
+def load_ignored():
+    """Return a set of keys to skip: 'project/*' for whole project, 'project/index' for specific."""
+    try:
+        with open(IGNORED_FILE) as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+
+    ignored = set()
+    global_list = data.get("__global__", [])
+    for idx in global_list:
+        ignored.add("*/" + idx)
+
+    for project, val in data.items():
+        if project.startswith("_"):
+            continue
+        if val == "*":
+            ignored.add(project + "/*")
+        elif isinstance(val, list):
+            for idx in val:
+                ignored.add(project + "/" + idx)
+    return ignored
+
+
+def is_ignored(project_name, index_name, ignored):
+    return (
+        project_name + "/*" in ignored or          # whole project ignored
+        project_name + "/" + index_name in ignored  # specific index ignored
+        or "*/" + index_name in ignored             # globally ignored
+    )
+
+
+# ------------------------------------------------------------------------------
+# Claude Code Routine trigger
+# ------------------------------------------------------------------------------
+
+def trigger_routine(alerts):
+    """POST alert payload to Claude Code Routine webhook for agentic investigation."""
+    if not ROUTINE_WEBHOOK_URL or not ROUTINE_WEBHOOK_TOKEN:
+        print("  (Routine webhook not configured — skipping agentic trigger)")
+        return False
+
+    payload = json.dumps({
+        "message": (
+            "Pinecone Monitor has detected {} alert(s). "
+            "Read memory from claude-memory repo, diagnose each alert using Apify API, "
+            "attempt to fix, and send a summary email. "
+            "For actions that modify code or config, send an approval email first."
+        ).format(len(alerts)),
+        "alerts": alerts,
+    }).encode()
+
+    req = urllib.request.Request(
+        ROUTINE_WEBHOOK_URL,
+        data=payload,
+        headers={
+            "Authorization": "Bearer " + ROUTINE_WEBHOOK_TOKEN,
+            "Content-Type":  "application/json",
+            "anthropic-beta": "claude-code-routines-2025-05-14",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            result = json.loads(resp.read())
+            print("  Routine triggered (session_id=" + str(result.get("session_id", "?")) + ")")
+            return True
+    except Exception as e:
+        print("  Routine trigger failed: {}".format(e))
+        return False
+
+
 def build_html_email(alerts):
     BADGE = {
         "empty_index":         ("#dc2626", "Empty Index"),
@@ -623,6 +704,18 @@ def main():
 
     save_state(state)
 
+    # Filter out ignored indexes
+    ignored = load_ignored()
+    if ignored:
+        before = len(alerts)
+        alerts = [
+            a for a in alerts
+            if not is_ignored(a.get("project", ""), a.get("index", ""), ignored)
+        ]
+        skipped = before - len(alerts)
+        if skipped:
+            print("  Skipped {} alert(s) for ignored indexes.".format(skipped))
+
     print("\n" + "=" * 55)
     print("  Done. {} alert(s) found.".format(len(alerts)))
     print("=" * 55 + "\n")
@@ -632,6 +725,8 @@ def main():
         ok = dispatch_alert(alerts)
         if not ok:
             sys.exit(1)
+        print("  Triggering agentic investigation...")
+        trigger_routine(alerts)
     else:
         print("  All indexes healthy -- no alerts.")
 
