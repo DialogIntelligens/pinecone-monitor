@@ -243,9 +243,15 @@
       "stale_alert_sent_at": null
     },
     "bodyaltno": {
+<<<<<<< Updated upstream
       "drop_alert_sent_at": "2026-04-26T20:02:28.959642+00:00",
       "drop_detected_at": "2026-04-26T13:00:06.911401+00:00",
       "drop_from_count": 626,
+=======
+      "drop_alert_sent_at": null,
+      "drop_detected_at": null,
+      "drop_from_count": null,
+>>>>>>> Stashed changes
       "last_changed_at": "2026-04-25T10:50:32.741597+00:00",
       "last_checked_at": "2026-04-26T20:02:28.959642+00:00",
       "last_vector_count": 354,
