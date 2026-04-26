@@ -74,6 +74,7 @@ jobs:
           ROUTINE_WEBHOOK_URL:   ${{ secrets.ROUTINE_WEBHOOK_URL }}
           ROUTINE_WEBHOOK_TOKEN: ${{ secrets.ROUTINE_WEBHOOK_TOKEN }}
           RESEND_API_KEY:        ${{ secrets.RESEND_API_KEY }}
+          GH_PAT:                ${{ secrets.GH_PAT }}
         run: python pinecone_monitor.py
 
       # 5. Commit updated state file back to repo
