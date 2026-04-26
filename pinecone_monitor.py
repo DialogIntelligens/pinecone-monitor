@@ -507,19 +507,31 @@ def trigger_routine(alerts):
         print("  (Routine webhook not configured — skipping agentic trigger)")
         return False
 
-    payload = json.dumps({
-        "message": (
-            "Pinecone Monitor has detected {} alert(s). "
-            "Read memory from claude-memory repo, diagnose each alert using Apify API, "
-            "attempt to fix, and send a summary email. "
-            "For actions that modify code or config, send an approval email first."
-        ).format(len(alerts)),
-        "alerts": alerts,
-        "secrets": {
-            "GH_PAT": os.environ.get("GH_PAT", ""),
-            "RESEND_API_KEY": os.environ.get("RESEND_API_KEY", ""),
-        },
-    }).encode()
+    # Build alert summary text
+    alert_lines = []
+    for a in alerts:
+        alert_lines.append("- [{type}] Project={project} Index={index} Message={message}".format(
+            type=a.get("type", "?"),
+            project=a.get("project", "?"),
+            index=a.get("index", "?"),
+            message=a.get("message", ""),
+        ))
+    alert_text = "\n".join(alert_lines)
+
+    text = (
+        "Pinecone Monitor detected {n} alert(s):\n{alerts}\n\n"
+        "GH_PAT={gh_pat}\n"
+        "RESEND_API_KEY={resend}\n\n"
+        "Please read claude-memory from GitHub, diagnose each alert, "
+        "attempt to fix if possible, and send a summary email."
+    ).format(
+        n=len(alerts),
+        alerts=alert_text,
+        gh_pat=os.environ.get("GH_PAT", ""),
+        resend=os.environ.get("RESEND_API_KEY", ""),
+    )
+
+    payload = json.dumps({"text": text}).encode()
 
     req = urllib.request.Request(
         ROUTINE_WEBHOOK_URL,
@@ -527,7 +539,8 @@ def trigger_routine(alerts):
         headers={
             "Authorization": "Bearer " + ROUTINE_WEBHOOK_TOKEN,
             "Content-Type":  "application/json",
-            "anthropic-beta": "claude-code-routines-2025-05-14",
+            "anthropic-version": "2023-06-01",
+            "anthropic-beta": "experimental-cc-routine-2026-04-01",
         },
         method="POST",
     )
