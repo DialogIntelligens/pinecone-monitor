@@ -652,8 +652,18 @@ def dispatch_alert(alerts):
     subject = "Pinecone Alert: {} issue(s) detected".format(len(alerts))
     html    = build_html_email(alerts)
 
+    # Try Resend HTTP API first; fall back to SMTP if it fails (e.g. Cloudflare blocks)
     if RESEND_API_KEY:
-        return send_via_resend(RESEND_API_KEY, ALERT_EMAIL, FROM_EMAIL, subject, html)
+        ok = send_via_resend(RESEND_API_KEY, ALERT_EMAIL, FROM_EMAIL, subject, html)
+        if ok:
+            return True
+        print("  Resend HTTP failed -- trying SMTP fallback (smtp.resend.com)...")
+        # Use Resend SMTP relay: user=resend, password=api_key
+        smtp_host = SMTP_HOST if SMTP_HOST != "smtp.gmail.com" else "smtp.resend.com"
+        smtp_user = SMTP_USER if SMTP_USER else "resend"
+        smtp_pass = SMTP_PASSWORD if SMTP_PASSWORD else RESEND_API_KEY
+        return send_via_smtp(smtp_host, SMTP_PORT, smtp_user, smtp_pass,
+                             FROM_EMAIL, ALERT_EMAIL, subject, html)
     elif SMTP_USER and SMTP_PASSWORD:
         return send_via_smtp(SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD,
                              FROM_EMAIL, ALERT_EMAIL, subject, html)
@@ -728,7 +738,7 @@ def main():
         print("  Sending alert email...")
         ok = dispatch_alert(alerts)
         if not ok:
-            sys.exit(1)
+            print("  WARNING: Email failed — continuing to trigger routine anyway.")
         print("  Triggering agentic investigation...")
         trigger_routine(alerts)
     else:
