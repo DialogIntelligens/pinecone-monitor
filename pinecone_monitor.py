@@ -515,6 +515,10 @@ def trigger_routine(alerts):
             "For actions that modify code or config, send an approval email first."
         ).format(len(alerts)),
         "alerts": alerts,
+        "secrets": {
+            "GH_PAT": os.environ.get("GH_PAT", ""),
+            "RESEND_API_KEY": os.environ.get("RESEND_API_KEY", ""),
+        },
     }).encode()
 
     req = urllib.request.Request(

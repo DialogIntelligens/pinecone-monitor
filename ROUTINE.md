@@ -5,8 +5,18 @@ You run on Anthropic's cloud via Claude Code Routines.
 
 ## Bootstrap (do this first, every run)
 
+Your initial message contains a JSON payload with `alerts` and `secrets`. Extract the secrets first:
+
+```python
+import json, sys
+# The initial message is JSON — parse GH_PAT and RESEND_API_KEY from the "secrets" field
+# They are available in the context as the initial message payload
+```
+
+Then clone claude-memory using GH_PAT from the payload:
+
 ```bash
-PAT="${GH_PAT}"  # from GitHub Secret GH_PAT
+PAT="<GH_PAT from secrets in payload>"
 git clone https://${PAT}@github.com/DialogIntelligens/claude-memory.git /tmp/memory 2>/dev/null
 ```
 
@@ -78,11 +88,11 @@ curl -s -X POST "https://api.apify.com/v2/acts/{ACTOR_ID}/runs" \
 
 ### Step 5: Send status email
 
-Always send a summary email when done. Use the Resend API:
+Always send a summary email when done. Use RESEND_API_KEY from the secrets in your initial payload:
 
 ```bash
 curl -s -X POST "https://api.resend.com/emails" \
-  -H "Authorization: Bearer $RESEND_API_KEY" \
+  -H "Authorization: Bearer <RESEND_API_KEY from secrets>" \
   -H "Content-Type: application/json" \
   -d '{
     "from": "Pinecone Monitor <monitor@dialogintelligens.dk>",
@@ -131,7 +141,7 @@ git push
 
 ## Email credentials
 
-- RESEND_API_KEY: available as env var from GitHub Actions (passed in webhook payload context)
+- RESEND_API_KEY: read from `secrets.RESEND_API_KEY` in your initial message payload
+- GH_PAT: read from `secrets.GH_PAT` in your initial message payload
 - FROM: monitor@dialogintelligens.dk
 - TO: team@dialogintelligens.dk
-
