@@ -2238,7 +2238,7 @@
       "spike_alert_sent_at": null,
       "spike_detected_at": null,
       "spike_from_count": null,
-      "stale_alert_sent_at": "2026-04-26T19:35:22.149887+00:00"
+      "stale_alert_sent_at": null
     }
   },
   "teamny3": {
