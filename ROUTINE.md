@@ -133,6 +133,7 @@ Check if the actor has run recently (within 3 weeks). If last run was >3 weeks a
 | Matches known pattern → known fix | Apply fix directly |
 | Legitimate manual push (spike) | Email only, no fix |
 | Run FAILED (timeout / network) | **Auto re-trigger** |
+| Catastrophic drop (>80%) from clearly identifiable technical cause | **Auto-fix** (see policy below) |
 | Item count dropped (site change) | **Email Nichoals** with logs |
 | Scheduler disabled | **Email Nichoals** — don't re-enable without approval |
 | Pinecone integration disconnected | **Email Nichoals** |
@@ -140,7 +141,18 @@ Check if the actor has run recently (within 3 weeks). If last run was >3 weeks a
 | Inactive client (no runs 3+ weeks) | **Email Nichoals** |
 | Anything unclear | **Email Nichoals** |
 
-**Only auto-fix if you are confident the issue is a transient failure or matches a known fix from the case log.**
+### Auto-fix policy
+
+**Fix immediately without asking** when ALL of the following are true:
+1. The drop is clearly caused by a technical failure (expiry misconfiguration, timeout, partial run, billing outage) — not a site change or intentional action
+2. The root cause is unambiguous — you can explain exactly why the vectors disappeared
+3. The fix is reversible (webhook config change + re-trigger run)
+
+**Classic auto-fix cases:**
+- Index drops >80-90% and the diagnosis is: short `expiredObjectDeletionPeriodDays` + missed/failed/partial run → fix expiry, trigger restoration
+- A run timed out on a healthy site that ran fine previously → re-trigger with increased timeout
+
+**Stop and email instead** if you are even slightly unsure why it happened. The bar for auto-fixing is: "I could explain this to Nichoals in one sentence and he would say yes obviously." If you have to hedge, email instead.
 
 ### Re-trigger a run:
 ```bash
@@ -201,6 +213,26 @@ This is how the routine learns — each run leaves a record that the next run wi
 - Rotating or updating API keys
 - DNS or Render changes
 - Situations where you're not confident about the root cause
+
+---
+
+## Actor → Pinecone index naming convention
+
+Each client typically has 1–2 actors. The actor name suffix always matches the Pinecone index suffix it writes to:
+
+| Actor suffix | Pinecone index suffix | Content |
+|---|---|---|
+| `-pro` | `-pro` | Products (webshops) |
+| `-alt` | `-alt` | Alternative / general content |
+| `-generelt` | `-generelt` | General content (FAQ, about, etc.) |
+| `-faq` | `-faq` | FAQ content |
+| no suffix | no suffix / matches client name | Varies |
+
+**Rule:** If an actor is named `clientname-pro`, it writes to the Pinecone index `clientname-pro`. Never assume an actor writes to a different index type than its suffix suggests. When verifying actor→index mappings, cross-check the webhook `pineconeIndexName` field — it will match the suffix pattern.
+
+**Typical setup per client:**
+- Webshop: `-pro` (products) + `-alt` or `-generelt` (FAQ/general)
+- Non-webshop: `-alt` or `-generelt` only
 
 ---
 
